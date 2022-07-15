@@ -5,7 +5,8 @@ import { Navigation, Thumbs } from 'swiper'
 
 
 const ProductImageSlider = (props) => {
-  const [activeThumbs, setActiveThumbs] = useState()
+  // const [activeThumbs, setActiveThumbs] = useState()
+  const [activeThumbs] = useState()
   return (
     <>
       <Swiper
@@ -19,9 +20,12 @@ const ProductImageSlider = (props) => {
       >
         {
 
-          props.images.map((item, index) => (
+          props.imT.map((item, index) => (
             <SwiperSlide key={index}>
-              <img src={item} alt="Product Image" />
+              <img src={item} alt="Product" className='productImT'/>
+              {/* <input type="image" img src = {item} alt="photo" /> */}
+
+
             </SwiperSlide>
           ))
         }
@@ -37,10 +41,11 @@ const ProductImageSlider = (props) => {
       >
         {
 
-          props.images.map((item, index) => (
+          props.imT.map((item, index) => (
             <SwiperSlide key={index}>
               <div className='product-image-slider-thumbs-wrapper'>
-                <img src={item} alt="Product Image" />
+                <img src={item} alt="Product" className='productImT' />
+                {/* <input type="image" img src = {item} alt="photo" /> */}
               </div>
             </SwiperSlide>
           ))

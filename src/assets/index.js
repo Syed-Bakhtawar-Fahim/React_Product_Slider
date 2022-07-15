@@ -1,4 +1,4 @@
-export const productImages = [
+export const productImT = [
     require('./images/giay01.jpg'),
     require('./images/giay02.jpg'),
     require('./images/giay03.jpg'),
